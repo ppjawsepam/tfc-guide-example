@@ -14,7 +14,7 @@ resource "aws_vpc" "vpc2" {
 
 resource aws_instance "bastion" {
   instance_type = "t2.micro"
-  ami = "ami-173c6d52"
+  ami = "ami-0d359437d1756caa8"
   tags = {
     Name = "bastion" 
     }
