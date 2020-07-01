@@ -29,7 +29,7 @@ resource "aws_vpc" "vpc1" {
   }
 
   tags = {
-    Name = "allow_tls"
+    Name = "allow_ssh"
   }
 } 
   
@@ -46,5 +46,6 @@ resource aws_instance "bastion" {
   instance_type = "t2.micro"
   ami = "ami-173c6d52"
   tags {
-    name ="bastion" }
+    name ="bastion" 
+    }
   }
