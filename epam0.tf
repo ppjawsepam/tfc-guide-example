@@ -3,7 +3,9 @@ resource "aws_vpc" "vpc1" {
   tags = {
     Name = "vpc1"
   }
- resource "aws_security_group" "SG1" {
+ } 
+ 
+resource "aws_security_group" "SG1" {
   name        = "SecuGrp1"
   description = "Allow SSH inbound traffic"
   vpc_id      = "${aws_vpc.main.id}"
@@ -26,9 +28,7 @@ resource "aws_vpc" "vpc1" {
   tags = {
     Name = "allow_ssh"
   }
-} 
-  
-}
+  }
 
 resource "aws_vpc" "vpc2" {
   cidr_block = "10.10.0.0/16"
