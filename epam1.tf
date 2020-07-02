@@ -94,7 +94,7 @@ resource "aws_elb" "web" {
 }
 
 resource "aws_key_pair" "auth" {
-  key_name   = "${var.key_name}"
+  key_name   = "kulcs1"
   public_key = "${file(var.public_key_path)}"
 }
 
