@@ -26,3 +26,8 @@ resource "aws_dynamodb_table" "tfc_example_table" {
     user_name = var.tag_user_name
   }
 }
+
+resource "aws_key_pair" "auth" {
+  key_name   = "default"
+  public_key = "${file(var.public_key_path)}"
+}
